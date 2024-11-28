@@ -129,35 +129,8 @@
 									{
 										m_Expression = "hide_tool_model"
 									},
-									
-									{
-										m_Expression = ""
-									},
-									
-									{
-										m_Expression = "0"
-									},
-								]
-							}
-						},
-						{
-							_class = "CSmartPropOperation_Rotate"
-							m_vRotation = 
-							{
-								m_Components = 
-								[
-									
-									{
-										m_Expression = "0"
-									},
-									
-									{
-										m_Expression = "0"
-									},
-									
-									{
-										m_Expression = "0"
-									},
+									0,
+									0
 								]
 							}
 						},
@@ -197,16 +170,10 @@
 								[
 									
 									{
-										m_Expression = "0 + 90"
+										m_Expression = "90"
 									},
-									
-									{
-										m_Expression = "0"
-									},
-									
-									{
-										m_Expression = "0"
-									},
+									0,
+									0
 								]
 							}
 						},
@@ -216,15 +183,8 @@
 							{
 								m_Components = 
 								[
-									
-									{
-										m_Expression = "0"
-									},
-									
-									{
-										m_Expression = "0"
-									},
-									
+									0,
+									0,
 									{
 										m_Expression = "-sun_distance / skybox_scale"
 									},
@@ -276,16 +236,10 @@
 								[
 									
 									{
-										m_Expression = "0 + 90"
+										m_Expression = "90"
 									},
-									
-									{
-										m_Expression = "0"
-									},
-									
-									{
-										m_Expression = "0"
-									},
+									0,
+									0
 								]
 							}
 						},
@@ -295,15 +249,8 @@
 							{
 								m_Components = 
 								[
-									
-									{
-										m_Expression = "0"
-									},
-									
-									{
-										m_Expression = "0"
-									},
-									
+									0,
+									0,
 									{
 										m_Expression = "(-sun_distance - 16) / skybox_scale"
 									},
