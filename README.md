@@ -2,8 +2,8 @@
 
 # How to install and use it:
 
-  1. Download latest version from [release page](https://github.com/OrelStealth/vsmart-sun/releases)
-  2. 
+  1. Download the latest version from [release page](https://github.com/OrelStealth/vsmart-sun/releases)
+  2. Put files to "game/csgo_addons/map_name" folder
   3. Find "sun" smartprop in asset browser and place it into skybox map, preferably to "0 0 0" coordinates.
   4. Copy "Angles" from light_environment and paste them to the "sun" smartprop angles
   5. Set "Skybox scale" in parameters depending on sky_camera scale settings. The higher skybox scale the better since it will be available to put sun planes further.
