@@ -72,11 +72,18 @@
         {
             _class = "CSmartPropVariable_Int"
             m_VariableName = "hide_tool_model"
-			m_ParameterName = "Hide sun tool model"
+			m_ParameterName = "Dig sun helper"
             m_bExposeAsParameter = true
             m_DefaultValue = 0
             m_nParamaterMinValue = 0
             m_nParamaterMaxValue = 256
+        },
+        {
+            _class = "CSmartPropVariable_Bool"
+            m_VariableName = "hide_tool_model_bool"
+			m_ParameterName = "Hide sun helper"
+            m_bExposeAsParameter = true
+            m_DefaultValue = false
         },
 	]
 	m_Children = 
@@ -114,6 +121,15 @@
 					}
 					m_Modifiers =
 					[
+						{
+							_class = "CSmartPropFilter_VariableValue"
+							m_VariableComparison = 
+							{
+								m_Name = "hide_tool_model_bool"
+								m_Value = false
+								m_Comparison = "EQUAL"
+							}
+						},
 						{
 							_class = "CSmartPropOperation_SetTintColor"
 							m_Mode = "REPLACE"
