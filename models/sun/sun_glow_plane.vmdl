@@ -1,0 +1,90 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:modeldoc37:version{9e04b9aa-f073-4e59-8923-ff57489eb2c7} -->
+{
+	rootNode = 
+	{
+		_class = "RootNode"
+		children = 
+		[
+			{
+				_class = "RenderMeshList"
+				children = 
+				[
+					{
+						_class = "RenderMeshFile"
+						children = 
+						[
+							{
+								_class = "ReplaceMeshMaterials"
+								name = "sun_disc_glow_001"
+								remaps = [  ]
+								use_single_material = true
+								single_override_material = "materials/effects/glows/sun_disc_glow_001.vmat"
+							},
+						]
+						filename = "models\\sun\\fbx\\mesh\\sun_glow_plane.fbx"
+						import_scale = 1.0
+						import_filter = 
+						{
+							exclude_by_default = false
+							exception_list = [  ]
+						}
+					},
+				]
+			},
+			{
+				_class = "MaterialGroupList"
+				children = 
+				[
+					{
+						_class = "MaterialGroup"
+						name = "sun_disc_glow_002"
+						remaps = 
+						[
+							{
+								from = "materials/effects/glows/sun_disc_glow_001.vmat"
+								to = "materials/effects/glows/sun_disc_glow_002.vmat"
+							},
+						]
+					},
+					{
+						_class = "MaterialGroup"
+						name = "sun_disc_glow_003"
+						remaps = 
+						[
+							{
+								from = "materials/effects/glows/sun_disc_glow_001.vmat"
+								to = "materials/effects/glows/sun_disc_glow_003.vmat"
+							},
+						]
+					},
+					{
+						_class = "MaterialGroup"
+						name = "sun_disc_glow_004"
+						remaps = 
+						[
+							{
+								from = "materials/effects/glows/sun_disc_glow_001.vmat"
+								to = "materials/effects/glows/sun_disc_glow_004.vmat"
+							},
+						]
+					},
+					{
+						_class = "MaterialGroup"
+						name = "sun_disc_glow_01_clouded"
+						remaps = 
+						[
+							{
+								from = "materials/effects/glows/sun_disc_glow_001.vmat"
+								to = "materials/de_train/hr_train_s2/effects/sun_disc_glow_01_clouded.vmat"
+							},
+						]
+					},
+				]
+			},
+		]
+		model_archetype = ""
+		primary_associated_entity = ""
+		anim_graph_name = ""
+		document_sub_type = "ModelDocSubType_None"
+	}
+}

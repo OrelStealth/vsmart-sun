@@ -1,0 +1,318 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:vrfunknown:version{5ab656f0-06de-478a-804e-489e82994fb5} -->
+{
+	generic_data_type = "CSmartPropRoot"
+	m_Variables = 
+	[
+		{
+			_class = "CSmartPropVariable_Color"
+			m_VariableName = "sun_tint"
+			m_ParameterName = "Disk tint"
+			m_bExposeAsParameter = true
+			m_DefaultValue = [255,204,133]
+		},
+		{
+			_class = "CSmartPropVariable_Color"
+			m_VariableName = "glow_tint"
+			m_ParameterName = "Glow tint"
+			m_bExposeAsParameter = true
+			m_DefaultValue = [214,160,109]
+		},
+		{
+            _class = "CSmartPropVariable_MaterialGroup"
+			m_sModelName = resource_name:"models/sun/sun_glow_plane.vmdl"
+            m_DefaultValue = "sun_disc_glow_003"
+            m_bExposeAsParameter = true
+            m_VariableName = "Skin_Var"
+            m_DisplayName = "Disk material (NOTE: Some materials has shadows, dont forget to turn shadows off for this smartprop)"
+        },
+        {
+            _class = "CSmartPropVariable_Float"
+            m_VariableName = "skybox_scale"
+			m_ParameterName = "Skybox scale"
+            m_bExposeAsParameter = true
+            m_DefaultValue = 16
+            m_flParamaterMinValue = 1
+            m_flParamaterMaxValue = 16
+        },
+        {
+            _class = "CSmartPropVariable_Int"
+            m_VariableName = "sun_distance"
+			m_ParameterName = "Disk distance"
+            m_bExposeAsParameter = true
+			m_DefaultValue = 65536
+            //m_DefaultValue = 49152
+            m_nParamaterMinValue = 8
+            m_nParamaterMaxValue = 100000
+        },
+        {
+            _class = "CSmartPropVariable_Int"
+            m_VariableName = "sun_scale"
+			m_ParameterName = "Disk scale"
+            m_bExposeAsParameter = true
+            m_DefaultValue = 3584
+            m_nParamaterMinValue = 8
+            m_nParamaterMaxValue = 5000
+        },
+        {
+            _class = "CSmartPropVariable_Bool"
+            m_VariableName = "enable_glow"
+			m_ParameterName = "Glow enable"
+            m_bExposeAsParameter = true
+            m_DefaultValue = true
+        },
+        {
+            _class = "CSmartPropVariable_Int"
+            m_VariableName = "glow_scale"
+			m_ParameterName = "Glow scale"
+            m_bExposeAsParameter = true
+            m_DefaultValue = 131072
+            m_nParamaterMinValue = 8
+            m_nParamaterMaxValue = 200000
+        },
+        {
+            _class = "CSmartPropVariable_Int"
+            m_VariableName = "hide_tool_model"
+			m_ParameterName = "Hide sun tool model"
+            m_bExposeAsParameter = true
+            m_DefaultValue = 0
+            m_nParamaterMinValue = 0
+            m_nParamaterMaxValue = 256
+        },
+	]
+	m_Children = 
+	[
+		{
+            _class = "CSmartPropElement_Group"
+			m_Modifiers = 
+			[
+				{
+					_class = "CSmartPropOperation_CreateLocator"
+					m_bEnabled = {m_Expression = "false"}
+					m_flDisplayScale = {m_Expression = "1"}
+					m_bAllowScale = false
+				},
+			]
+			m_Children = 
+			[
+				{
+					_class = "CSmartPropElement_Model"
+					m_sModelName = resource_name:"models/editor/sun.vmdl"
+					m_vModelScale = 
+					{
+						m_Components = 
+						[
+							{
+								m_Expression = "0.5"
+							},
+							{
+								m_Expression = "0.5"
+							},
+							{
+								m_Expression = "0.5"
+							},
+						]
+					}
+					m_Modifiers =
+					[
+						{
+							_class = "CSmartPropOperation_SetTintColor"
+							m_Mode = "REPLACE"
+							m_ColorChoices = [{m_Color = {m_SourceName = "sun_tint"}}]
+						},
+						{
+							_class = "CSmartPropOperation_Translate"
+							m_vPosition = 
+							{
+								m_Components = 
+								[
+									
+									{
+										m_Expression = "hide_tool_model"
+									},
+									
+									{
+										m_Expression = ""
+									},
+									
+									{
+										m_Expression = "0"
+									},
+								]
+							}
+						},
+						{
+							_class = "CSmartPropOperation_Rotate"
+							m_vRotation = 
+							{
+								m_Components = 
+								[
+									
+									{
+										m_Expression = "0"
+									},
+									
+									{
+										m_Expression = "0"
+									},
+									
+									{
+										m_Expression = "0"
+									},
+								]
+							}
+						},
+					]
+				},
+				{
+					_class = "CSmartPropElement_Model"
+					m_MaterialGroupName = {m_SourceName = "Skin_Var"}
+					m_sModelName = resource_name:"models/sun/sun_glow_plane.vmdl"
+					m_vModelScale = 
+					{
+						m_Components = 
+						[
+							{
+								m_Expression = "1 / 32 * sun_scale / skybox_scale"
+							},
+							{
+								m_Expression = "1 / 32 * sun_scale / skybox_scale"
+							},
+							{
+								m_Expression = "1 / 32 * sun_scale / skybox_scale"
+							},
+						]
+					}
+					m_Modifiers =
+					[
+						{
+							_class = "CSmartPropOperation_SetTintColor"
+							m_Mode = "REPLACE"
+							m_ColorChoices = [{m_Color = {m_SourceName = "sun_tint"}}]
+						},
+						{
+							_class = "CSmartPropOperation_Rotate"
+							m_vRotation = 
+							{
+								m_Components = 
+								[
+									
+									{
+										m_Expression = "0 + 90"
+									},
+									
+									{
+										m_Expression = "0"
+									},
+									
+									{
+										m_Expression = "0"
+									},
+								]
+							}
+						},
+						{
+							_class = "CSmartPropOperation_Translate"
+							m_vPosition = 
+							{
+								m_Components = 
+								[
+									
+									{
+										m_Expression = "0"
+									},
+									
+									{
+										m_Expression = "0"
+									},
+									
+									{
+										m_Expression = "-sun_distance / skybox_scale"
+									},
+								]
+							}
+						},
+					]
+				},
+				{
+					_class = "CSmartPropElement_Model"
+					m_MaterialGroupName = {m_SourceName = "Skin_Var"}
+					m_sModelName = resource_name:"models/sun/sun_glow_plane2.vmdl"
+					m_vModelScale = 
+					{
+						m_Components = 
+						[
+							{
+								m_Expression = "1 / 32 * glow_scale / skybox_scale"
+							},
+							{
+								m_Expression = "1 / 32 * glow_scale / skybox_scale"
+							},
+							{
+								m_Expression = "1 / 32 * glow_scale / skybox_scale"
+							},
+						]
+					}
+					m_Modifiers =
+					[
+						{
+							_class = "CSmartPropOperation_SetTintColor"
+							m_Mode = "REPLACE"
+							m_ColorChoices = [{m_Color = {m_SourceName = "glow_tint"}}]
+						},
+						{
+							_class = "CSmartPropFilter_VariableValue"
+							m_VariableComparison = 
+							{
+								m_Name = "enable_glow"
+								m_Value = true
+								m_Comparison = "EQUAL"
+							}
+						},
+						{
+							_class = "CSmartPropOperation_Rotate"
+							m_vRotation = 
+							{
+								m_Components = 
+								[
+									
+									{
+										m_Expression = "0 + 90"
+									},
+									
+									{
+										m_Expression = "0"
+									},
+									
+									{
+										m_Expression = "0"
+									},
+								]
+							}
+						},
+						{
+							_class = "CSmartPropOperation_Translate"
+							m_vPosition = 
+							{
+								m_Components = 
+								[
+									
+									{
+										m_Expression = "0"
+									},
+									
+									{
+										m_Expression = "0"
+									},
+									
+									{
+										m_Expression = "(-sun_distance - 16) / skybox_scale"
+									},
+								]
+							}
+						},
+					]
+				},
+			]
+		}	
+	]
+}
