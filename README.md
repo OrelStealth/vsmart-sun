@@ -12,7 +12,7 @@
 
 # Can't see sun or sun flickers:
 
-If sun planes don't show up in hammer, it still might render in-game, but it's a signal, that it's better to lower sun distance or use higher skybox scale. Skybox scale 1 allows to set sun disk distance only up to ~50000 units to make it look without glitches, which may cause sun looks like it moves. If you use skybox scale 1, as a workaround make a second skybox map with only "sun" smartprop and sky_camera. It might lead to other problems, like main skybox not rendering in hammer, but rendering in-game, which can be fixed by temporaly hiding "sun" skybox.
+If sun planes don't show up in hammer, it still might render in-game, but it's a signal, that it's better to lower sun distance or use higher skybox scale. Skybox scale 1 allows to set sun disk distance only up to ~50000 units to make it look without glitches, which may cause sun looks like it moves.
 
 # Sun disk materials example:
 ![sun1](https://github.com/user-attachments/assets/ac1c8de8-1162-4783-86b1-8551f58bbbf7)
